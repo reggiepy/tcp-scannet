@@ -1,0 +1,16 @@
+version: "2.2.3"
+
+services:
+  tcp-scennett:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      labels:
+        - v1.0.0
+    container_name: tcp-scennet
+    volumes:
+    - ./:/app
+    restart: no
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
